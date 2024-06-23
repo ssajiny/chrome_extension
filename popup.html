@@ -1,0 +1,148 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="third-party/jquery-ui.css" />
+    <link rel="stylesheet" href="third-party/jquery-ui.structure.css" />
+    <link rel="stylesheet" href="third-party/jquery-ui.theme.css" />
+    <link rel="stylesheet" href="popup.css" />
+    <script src="third-party/jquery-1.12.4.js"></script>
+    <script src="third-party/jquery-ui-1.12.1.js"></script>
+  </head>
+  <body>
+    <input type="hidden" id="typing" value=false>
+    <div class="mainTab">
+      <button class="tab" id="tab_front">Login-Site1</button>
+      <button class="tab" id="tab_frontPages">Pages-Site1</button>
+      <button class="tab" id="tab_back">Login-Site2</button>
+      <button class="tab" id="tab_backPages">Pages-Site2</button>
+    </div>
+    <div class="mainDiv">
+      <div class="content" id="content_front">
+        <fieldset class="account" id="account_front1">
+          <legend>First Account</legend>
+          <label for="role_front1">ROLE:</label>
+          <select id="role_front1">
+            <option value="radio_user">User</option>
+            <option value="radio_manager">Manager</option>
+          </select><br>
+          <label for="id_front1">ID:</label>
+          <input type="text" id="id_front1" name="id"><br>
+          <label for="password_front1">PW:</label>
+          <input type="password" id="password_front1" name="password"><br>
+        </fieldset>
+
+        <fieldset class="account"  id="account_front2">
+          <legend>Second Account</legend>
+          <label for="role_front2">ROLE:</label>
+          <select id="role_front2">
+            <option value="radio_user">User</option>
+            <option value="radio_manager">Manager</option>
+          </select><br>
+          <label for="id_front2">ID:</label>
+          <input type="text" id="id_front2" name="id"><br>
+          <label for="password_front2">PW:</label>
+          <input type="password" id="password_front2" name="password"><br>
+        </fieldset>
+      </div>
+      <div class="content" id="pages_front">
+        Main URL: <input id="front_mainURL">
+        <button class="stylish-button-small" id="front_mainURL_edit">Edit</button>
+        <button class="stylish-button-small" id="front_mainURL_save">Save</button>
+        <button class="stylish-button-small" id="front_mainURL_navigate">Navigate</button>
+
+        <div class="front_editURL">
+          <select id="front_button_select">
+            <option id="front_button_select1" value="front_button_select1">1</option>
+            <option id="front_button_select2" value="front_button_select2">2</option>
+            <option id="front_button_select3" value="front_button_select3">3</option>
+            <option id="front_button_select4" value="front_button_select4">4</option>
+            <option id="front_button_select5" value="front_button_select5">5</option>
+            <option id="front_button_select6" value="front_button_select6">6</option>
+          </select>
+          <input id="front_editURL_name" placeholder="Name" maxlength="12">
+          <input id="front_editURL_url" placeholder="URL">
+        </div>
+
+        <div class="front_URLButtons">
+          <button class="stylish-button" id="front_URLButton_1">EMPTY</button>
+          <button class="stylish-button" id="front_URLButton_2">EMPTY</button>
+          <button class="stylish-button" id="front_URLButton_3">EMPTY</button>
+          <button class="stylish-button" id="front_URLButton_4">EMPTY</button>
+          <button class="stylish-button" id="front_URLButton_5">EMPTY</button>
+          <button class="stylish-button" id="front_URLButton_6">EMPTY</button>
+        </div>
+      </div>
+
+      <div class="content" id="content_back">
+        <fieldset class="account_back" id="account_back1">
+          <legend>First Account</legend>
+          <label for="role_back1">ROLE:</label>
+          <select id="role_back1">
+            <option value="radio_user">User</option>
+            <option value="radio_manager">Manager</option>
+          </select><br>
+          <label for="id_back1">ID:</label>
+          <input type="text" id="id_back1" name="id"><br>
+          <label for="password_back1">PW:</label>
+          <input type="password" id="password_back1" name="password"><br>
+        </fieldset>
+
+        <fieldset class="account_back"  id="account_back2">
+          <legend>Second Account</legend>
+          <label for="role_back2">ROLE:</label>
+          <select id="role_back2">
+            <option value="radio_user">User</option>
+            <option value="radio_manager">Manager</option>
+          </select><br>
+          <label for="id_back2">ID:</label>
+          <input type="text" id="id_back2" name="id"><br>
+          <label for="password_back2">PW:</label>
+          <input type="password" id="password_back2" name="password"><br>
+        </fieldset>
+      </div>
+      <div class="content" id="pages_back">
+        Main URL: <input id="back_mainURL">
+        <button class="stylish-button-small" id="back_mainURL_edit">Edit</button>
+        <button class="stylish-button-small" id="back_mainURL_save">Save</button>
+        <button class="stylish-button-small" id="back_mainURL_navigate">Navigate</button>
+
+        <div class="back_editURL">
+          <select id="back_button_select">
+            <option id="back_button_select1" value="back_button_select1">1</option>
+            <option id="back_button_select2" value="back_button_select2">2</option>
+            <option id="back_button_select3" value="back_button_select3">3</option>
+            <option id="back_button_select4" value="back_button_select4">4</option>
+            <option id="back_button_select5" value="back_button_select5">5</option>
+            <option id="back_button_select6" value="back_button_select6">6</option>
+          </select>
+          <input id="back_editURL_name" placeholder="Name" maxlength="12">
+          <input id="back_editURL_url" placeholder="URL">
+        </div>
+
+        <div class="back_URLButtons">
+          <button class="stylish-button" id="back_URLButton_1">EMPTY</button>
+          <button class="stylish-button" id="back_URLButton_2">EMPTY</button>
+          <button class="stylish-button" id="back_URLButton_3">EMPTY</button>
+          <button class="stylish-button" id="back_URLButton_4">EMPTY</button>
+          <button class="stylish-button" id="back_URLButton_5">EMPTY</button>
+          <button class="stylish-button" id="back_URLButton_6">EMPTY</button>
+        </div>
+      </div>
+
+      <div class="loginButtons">
+        <button class="loginBtn stylish-button-small" id="process_save">Save</button>
+        <button class="loginBtn stylish-button-small" id="process_login">Login</button>
+      </div>
+
+      <div class="right-text" id="rightText">
+        &nbsp
+      </div>
+
+      <div class="toggle-container">
+        <span>Enable Number Typing&nbsp;&nbsp;</span>
+        <input type="checkbox" id="toggle-button" class="toggle-button">
+        <label for="toggle-button" class="toggle-label"></label>
+      </div>
+    </div>
+    <script src="popup.js"></script>   
+  </body>
+</html>

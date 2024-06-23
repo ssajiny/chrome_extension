@@ -1,0 +1,224 @@
+body {
+  width: 400px;
+  min-height: 150px;
+  border-width: 3px;
+  border-color: black;
+  background-color: white;
+}
+
+.mainTab {
+  display: flex;
+  justify-content: center;
+}
+
+.mainDiv {
+  background-color: #FFE6E6;
+  border-radius: 10px;
+  padding-top: 10px;
+}
+
+/* Tab Select Button */
+.content {
+  margin: 0px 10px;
+  display: none;
+}
+
+.active {
+  display: block;
+}
+
+.tab {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-style: none;
+  padding: 10px 10px 5px 10px;
+  background-color: white;
+  cursor: pointer;
+  color: #800000;
+}
+
+.tab.selected {
+  border: 1px solid #ccc;
+  border-bottom-width: 0px;
+  background-color: #FFE6E6;
+}
+
+/* ID & PW */
+.account {
+  border-width: 3px;
+  border-radius: 10px;
+  padding: 5px;
+  margin-bottom: 5px;
+  width: 350px;
+}
+
+.account label {
+  display: inline-block;
+  margin-bottom: 5px;
+  width: 50px;
+}
+
+.account_back {
+  border-width: 3px;
+  border-radius: 10px;
+  padding: 5px;
+  margin-bottom: 5px;
+  width: 350px;
+}
+
+.account_back label {
+  display: inline-block;
+  margin-bottom: 5px;
+  width: 50px;
+}
+
+fieldset {
+  border: 1px solid #FFD2D2;
+  padding: 10px;
+  margin-bottom: 10px;
+  transition: background-color 0.3s ease;
+}
+
+fieldset.selected {
+  border: solid #EBACAC;
+  background-color: #EBACAC;
+}
+
+
+/* Login Buttons */
+.loginButtons {
+  margin: 10px;
+  display: flex;
+  justify-content: flex-end; /* 오른쪽 정렬 */
+  gap: 5px; /* 요소 간 간격 */
+}
+
+
+/* Pages */
+#front_mainURL #back_mainURL{
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.front_URLButtons, .back_URLButtons  {
+  display: grid;
+  margin-top: 10px;
+  grid-template-columns: repeat(2, 1fr); /* 2열 */
+  gap: 10px; /* 버튼 간격 */
+}
+
+.front_editURL, .back_editURL {
+  margin: 10px 0px 10px 0px;
+}
+
+#front_editURL_name, #back_editURL_name {
+  width: 100px;
+}
+
+#front_editURL_url, #back_editURL_url {
+  width: 240px;
+}
+
+
+/* 오른쪽 텍스트 */
+.right-text {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  margin-right: 10px;
+  color: red;
+}
+
+
+/* 숫자 입력 토글 버튼 */
+.toggle-container {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  margin-right: 10px;
+}
+
+.toggle-button {
+  display: none;
+}
+
+.toggle-label {
+  position: relative;
+  width: 30px;
+  height: 15px;
+  background-color: #FFC8C8;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.toggle-label::after {
+  content: '';
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  width: 12px;
+  height: 12px;
+  background-color: #fff;
+  border-radius: 50%;
+  transition: transform 0.3s;
+}
+
+.toggle-button:checked + .toggle-label {
+  background-color: #EBACAC;
+}
+
+.toggle-button:checked + .toggle-label::after {
+  transform: translateX(15px);
+}
+
+
+/* Buttons Style */
+.stylish-button {
+  background-color: #EBACAC;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center; /* 텍스트 가운데 정렬 */
+  text-decoration: none; /* 텍스트 데코레이션 없음 */
+  display: inline-block; /* 인라인 블록 요소 */
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer; /* 커서 포인터로 변경 */
+  border-radius: 5px; /* 둥근 테두리 */
+  transition: background-color 0.3s, transform 0.3s; /* 애니메이션 효과 */
+}
+
+.stylish-button:hover {
+  background-color: #DC9898; /* 호버 시 배경색 변경 */
+  transform: scale(1.05); /* 호버 시 확대 효과 */
+}
+
+.stylish-button:active {
+  background-color: #DC9898; /* 클릭 시 배경색 변경 */
+  transform: scale(0.95); /* 클릭 시 축소 효과 */
+}
+
+.stylish-button:focus {
+  outline: none; /* 포커스 시 외곽선 제거 */
+  box-shadow: 0 0 0 3px rgba(72, 209, 204, 0.5); /* 포커스 시 그림자 */
+}
+
+.stylish-button-small {
+  background-color: #D2D2FF;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  font-size: 14px;
+  padding: 3px 10px;
+}
+
+.stylish-button-small:hover {
+  background-color: #A0A0C8; /* 호버 시 배경색 변경 */
+  transform: scale(1.05); /* 호버 시 확대 효과 */
+}
+
+.stylish-button-small:active {
+  background-color: #A0A0C8; /* 클릭 시 배경색 변경 */
+  transform: scale(0.95); /* 클릭 시 축소 효과 */
+}
